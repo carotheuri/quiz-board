@@ -9,6 +9,13 @@ img{
 #results{
     display:block;
 }
+source{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+ }
 .flip-card {
     background-color: transparent;
     width: 300px;
