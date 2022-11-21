@@ -6,6 +6,9 @@ img{
     width:100%;
     /* height:auto;  */
 }
+#results{
+    display:block;
+}
 .flip-card {
     background-color: transparent;
     width: 300px;
