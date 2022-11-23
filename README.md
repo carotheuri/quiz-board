@@ -3,7 +3,13 @@ Answer Quiz Board Questions to Rate Your Understanding on JavaScript
 ## author name
 Caroline Wangari Theuri
 ## description of project
-This application allows club members to take quizes of the courses they have learned inorder to rate their understanding on the topic.
+This application allows club members to take quizes of the courses they have learned in order to rate their understanding on the topic.
+* On website load, see the school's website and click on clubs link at the navbar
+* When you read a topic click take quiz button
+* Fill in the appropriate answers and submit your choices
+* Wait for a popup with your results to be shown
+* If you get below 75 you can do a retest.
+* If you get equals to or above 75 close the modal and you will be redirected to the clubs page.
 ## project setup instructions
 * Clone the project on github
 * Open the code in vs code

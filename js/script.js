@@ -30,7 +30,7 @@ function gradeExam(formElements){;
     return outputResult;
 }
 function checkPerformance(gradedrslt){
-    if(gradedrslt <= 75){
+    if(gradedrslt < 75){
         $("#gradedresult").html('<p style="text-align:clearInterval;">Your Result QuizBoard is: </p>' + gradedrslt+ '/100' + '<br><a href="quiz.html" style="border-radius:10%;">Re-take Test</a>');
     }
     else{
