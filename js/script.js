@@ -1,9 +1,15 @@
 $(function(){
+    var result = '';
     $("form").submit(function(event){
         var fullName = $("#fullName").val();
-        alert(fullName);
+        alert("Hey " + fullName + " your quiz has been received");
         var input = $("form").serializeArray();
-        var result = gradeExam(input);
+        result = gradeExam(input);
+        $("#gradedresult").text(result);
+        $("#ex1").fadeIn(6000).modal();
+        $(".closemodal").click(() =>{
+            window.location.href = "computerclub.html";
+        });
         event.preventDefault();
     });
 
@@ -14,13 +20,18 @@ function gradeExam(formElements){
     console.log(formElements);
     var correctAnswers = ['JavaScript is a scripting language used to make the website interactive','Yes, perfectly','All of the mentioned','Function/Method'];
     var count = 0;
-    var output = '';
+    
     formElements.forEach(formElement => {
+        
         console.log(formElement['value']);
-        if(correctAnswers.indexOf(formElement['value'])){
+        if(correctAnswers[0].includes(formElement['value']) || correctAnswers[1].includes(formElement['value']) || correctAnswers[2].includes(formElement['value']) || correctAnswers[3].includes(formElement['value'])){
             count += 1;
         }
+        else{
+            //do nothing
+        }
     });
+    console.log(count);
     // each mark is 25%
     return (25*count);
 }

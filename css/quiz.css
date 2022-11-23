@@ -40,3 +40,6 @@ video{
   #formoption{
     margin-left: 45px;
   }
+  .modalresult{
+    display: none;
+  }

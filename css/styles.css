@@ -6,9 +6,18 @@ img{
     width:100%;
     /* height:auto;  */
 }
-#results{
-    display:block;
+.results{
+    display:none;
 }
+.hide {
+    display: none;
+}
+  
+/* button:hover + .hide {
+display: block;
+color: red;
+float:right;
+} */
 source{
     object-fit: contain;
     max-width: 100%;
