@@ -5,8 +5,8 @@ $(function(){
         alert("Hey " + fullName + " your quiz has been received");
         var input = $("form").serializeArray();
         result = gradeExam(input);
-        $("#gradedresult").html('<p style="text-align:clearInterval;">Your Result QuizBoard is: </p>' + result);
-        $("#ex1").fadeIn(6000).modal();
+        checkPerformance(result);
+        $("#ex1").fadeIn(3000).modal();
         $(".closemodal").click(() =>{
             window.location.href = "computerclub.html";
         });
@@ -19,7 +19,7 @@ function gradeExam(formElements){
     console.log(formElements);
     var correctAnswers = ['JavaScript is a scripting language used to make the website interactive','Yes, perfectly','All of the mentioned','Function/Method'];
     var count = 0;
-    
+    var outputResult = "";
     formElements.forEach(formElement => {
         
         console.log(formElement['value']);
@@ -30,7 +30,19 @@ function gradeExam(formElements){
             //do nothing
         }
     });
-    console.log(count);
-    // each mark is 25%
-    return (25*count);
+    outputResult = count * 25;
+    return outputResult;
+    //return (25*count);
+}
+function checkPerformance(gradedrslt){
+    alert(gradedrslt);
+    if(gradedrslt <= 75){
+        alert("chae");
+        $("#gradedresult").html('<p style="text-align:clearInterval;">Your Result QuizBoard is: </p>' + gradedrslt+ '/100' + '<br><a href="quiz.html" style="border-radius:10%;">Re-take Test</a>');
+    }
+    else{
+        alert("voii");
+        $("#gradedresult").html('<p style="text-align:clearInterval;">Your Result QuizBoard is: </p>' + gradedrslt + '<br> Congratulations');
+    }
+    
 }
