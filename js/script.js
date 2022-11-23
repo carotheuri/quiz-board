@@ -12,7 +12,6 @@ $(function(){
         });
         event.preventDefault();
     });
-
 });
 
 function gradeExam(formElements){
