@@ -5,7 +5,7 @@ $(function(){
         alert("Hey " + fullName + " your quiz has been received");
         var input = $("form").serializeArray();
         result = gradeExam(input);
-        $("#gradedresult").text(result);
+        $("#gradedresult").html('<p style="text-align:clearInterval;">Your Result QuizBoard is: </p>' + result);
         $("#ex1").fadeIn(6000).modal();
         $(".closemodal").click(() =>{
             window.location.href = "computerclub.html";
